@@ -1,7 +1,12 @@
 .section-cards {
-    background-color: #f1f2f3;
+    background-color: $platinum;
     padding: 1em;
+    &__header {
+        margin-bottom: 2em;
+        line-height: 2;
+    }
 }
+
 
 .cards-container {
     display: flex;

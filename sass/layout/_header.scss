@@ -22,26 +22,31 @@
             NAV BAR
 *********************************/
 .nav-bar {
-    background-color: mediumturquoise;
+    background-color: $blue-oxford;
 }
 
 .nav-bar__nav-list {
     display: flex;
     list-style-type: none;
     justify-content: center;
+    margin: .5em 0;
 }
 
 .nav-bar__nav-item {
     text-align: center;
-    background-color: pink;
+    margin: 0 .5em;
 }
 
 .nav-bar__nav-link {
     display: block;
-    background-color: purple;
+    background-color: $blue-oxford;
     color: #fff;
     padding: 1em 2em;
     text-decoration: none;
+    transition: .25s;
+    &:hover{
+        background-color: $blue-space;
+    }
 }
 
 
@@ -52,6 +57,7 @@
     background-color: olivedrab;
     display: flex;
     justify-content: space-between;
+    color: #fff;
 }
 
 .search-bar__logo-container,
@@ -60,32 +66,38 @@
 }
 
 .search-bar__logo-container {
-    background-color: yellow;
+    background-color: #333;
 }
 
 .search-bar__form-container {
-    background-color: gold;
+    background-color: #333;
     flex-basis: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .search-bar__form-label {
-    background-color: greenyellow;
+    background-color: #333;
 }
 
 .search-bar__form-search {
-    background-color: deeppink;
+    background-color: $platinum;
+    font-size: 1.25rem;
+    padding: .4rem .7rem;
+    border-radius: .5rem;
     width: 70%;
+    margin: 0 1.5rem;
 }
 
 .search-bar__form-submit {
-    background-color: darkslategray;
+    color: #fff;
+    background-color: #333;
 }
 
 .search-bar__carrito-container {
     flex: 0 0 3em;
-    background-color: goldenrod;
+    background-color: #333;
 }
 
 
