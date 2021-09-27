@@ -149,6 +149,19 @@ body {
   }
 }
 
+.search-bar__form-submit {
+  font-size: 1.4rem;
+  padding: 0.3rem 0.8rem;
+  border: solid #E5E5E5 1px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.search-bar__form-submit:hover, .search-bar__form-submitfocus {
+  background-color: #FCA311;
+  color: #14213D;
+  border: solid 1px;
+}
+
 /*********************************
             HEADER
 *********************************/
@@ -248,7 +261,7 @@ body {
   font-size: 1.25rem;
   padding: 0.4rem 0.7rem;
   border-radius: 0.5rem;
-  width: 70%;
+  width: 50%;
   margin: 0 1.5rem;
 }
 
@@ -260,6 +273,8 @@ body {
 .search-bar__carrito-container {
   flex: 0 0 3em;
   background-color: #333;
+  align-self: center;
+  margin: auto 2em;
 }
 
 /*********************************

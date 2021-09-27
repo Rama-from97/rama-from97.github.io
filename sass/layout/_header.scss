@@ -97,7 +97,7 @@
     font-size: 1.25rem;
     padding: .4rem .7rem;
     border-radius: .5rem;
-    width: 70%;
+    width: 50%;
     margin: 0 1.5rem;
 }
 
@@ -109,6 +109,8 @@
 .search-bar__carrito-container {
     flex: 0 0 3em;
     background-color: #333;
+    align-self: center;
+    margin: auto 2em;
 }
 
 

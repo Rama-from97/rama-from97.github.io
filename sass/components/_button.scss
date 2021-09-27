@@ -1,0 +1,13 @@
+.search-bar__form-submit {
+    font-size: 1.4rem;
+    padding: .3rem .8rem;
+    border: solid $platinum 1px;
+    border-radius: .5rem;
+    cursor: pointer;
+    &:hover,
+    &focus {
+        background-color: $orange-web;
+        color: $blue-oxford;
+        border: solid 1px;
+    }
+}
