@@ -54,7 +54,7 @@
             SEARCH BAR
 *********************************/
 .search-bar {
-    background-color: olivedrab;
+    background-color: #333;
     display: flex;
     justify-content: space-between;
     color: #fff;
@@ -62,11 +62,21 @@
 
 .search-bar__logo-container,
 .search-bar__form-container {
-    padding: 1em;
+    padding: .5em;
 }
 
 .search-bar__logo-container {
     background-color: #333;
+    display: flex;
+}
+
+.search-bar__logo-svg {
+    height: 3.5em;
+    margin: 0 1em;
+}
+.search-bar__logo-name {
+    margin: auto 0;
+    font-size: 1.8rem;
 }
 
 .search-bar__form-container {
@@ -79,6 +89,7 @@
 
 .search-bar__form-label {
     background-color: #333;
+    cursor: pointer;
 }
 
 .search-bar__form-search {
