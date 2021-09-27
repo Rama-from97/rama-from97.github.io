@@ -37,20 +37,14 @@ body {
   width: 220px;
   max-width: 300px;
   height: 400px;
-  overflow: hidden;
+  overflow: visible;
   display: block;
   position: relative;
-  isolation: isolate;
   color: #fcfdfe;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0 0 3px rgba(0, 0, 0, 0.4);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  transition: all 0.2s;
-}
-.card:hover, .card:focus {
-  transform: scale(1.03);
-  transform-origin: bottom;
-  box-shadow: 0px 7px 8px 4px rgba(0, 0, 0, 0.05), 0 3px 3px rgba(0, 0, 0, 0.01);
+  transition: all 0.7s;
 }
 .card__image {
   background-size: cover;
@@ -58,13 +52,6 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
   clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
   background-position: center;
-  transition: all 0.2s;
-}
-.card:hover .card__image {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px);
-  clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px);
-  transform: scale(1.1) rotate(-2deg);
-  transition-delay: 0s;
 }
 .card__content {
   position: absolute;
@@ -73,40 +60,17 @@ body {
   height: 230px;
   width: 100%;
   z-index: -1;
-  transition: all 0.2s;
 }
-.card:hover .card__content {
-  padding-top: 4em;
+.card__article, .card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
-.card:nth-child(10n+1) .card__content {
-  background-image: linear-gradient(to top, #b429f9, #26c5f3);
-}
-.card:nth-child(10n+2) .card__content {
-  background-image: linear-gradient(to top, #af1239, #cce269);
-}
-.card:nth-child(10n+3) .card__content {
-  background-image: linear-gradient(to top, #0b3866, #3ddab2);
-}
-.card:nth-child(10n+4) .card__content {
-  background-image: linear-gradient(to top, #f40752, #7c65a9);
-}
-.card:nth-child(10n+5) .card__content {
-  background-image: linear-gradient(to top, #1c3b41, #69d449);
-}
-.card:nth-child(10n+6) .card__content {
-  background-image: linear-gradient(to top, #0a5df8, #ed2d53);
-}
-.card:nth-child(10n+7) .card__content {
-  background-image: linear-gradient(to top, #661069, #30d26e);
-}
-.card:nth-child(10n+8) .card__content {
-  background-image: linear-gradient(to top, #702b19, #cec360);
-}
-.card:nth-child(10n+9) .card__content {
-  background-image: linear-gradient(to top, #034a66, #ced11a);
-}
-.card:nth-child(10n+10) .card__content {
-  background-image: linear-gradient(to top, #ec458d, #474ed7);
+.card__back {
+  transform: rotateY(180deg);
+  padding: 5em 1em;
 }
 @media (min-width: 1024px) {
   .card {
@@ -118,20 +82,63 @@ body {
     min-width: 240px;
   }
 }
+
+.card-area * {
+  transform-style: preserve-3d;
+}
+.card-area:nth-child(10n+1) > .card, .card-area:nth-child(10n+1) > .card .card-area__back {
+  background-image: linear-gradient(to top, #b429f9, #26c5f3);
+}
+.card-area:nth-child(10n+2) > .card, .card-area:nth-child(10n+2) > .card .card-area__back {
+  background-image: linear-gradient(to top, #af1239, #cce269);
+}
+.card-area:nth-child(10n+3) > .card, .card-area:nth-child(10n+3) > .card .card-area__back {
+  background-image: linear-gradient(to top, #0b3866, #3ddab2);
+}
+.card-area:nth-child(10n+4) > .card, .card-area:nth-child(10n+4) > .card .card-area__back {
+  background-image: linear-gradient(to top, #f40752, #7c65a9);
+}
+.card-area:nth-child(10n+5) > .card, .card-area:nth-child(10n+5) > .card .card-area__back {
+  background-image: linear-gradient(to top, #1c3b41, #69d449);
+}
+.card-area:nth-child(10n+6) > .card, .card-area:nth-child(10n+6) > .card .card-area__back {
+  background-image: linear-gradient(to top, #0a5df8, #ed2d53);
+}
+.card-area:nth-child(10n+7) > .card, .card-area:nth-child(10n+7) > .card .card-area__back {
+  background-image: linear-gradient(to top, #661069, #30d26e);
+}
+.card-area:nth-child(10n+8) > .card, .card-area:nth-child(10n+8) > .card .card-area__back {
+  background-image: linear-gradient(to top, #702b19, #cec360);
+}
+.card-area:nth-child(10n+9) > .card, .card-area:nth-child(10n+9) > .card .card-area__back {
+  background-image: linear-gradient(to top, #034a66, #ced11a);
+}
+.card-area:nth-child(10n+10) > .card, .card-area:nth-child(10n+10) > .card .card-area__back {
+  background-image: linear-gradient(to top, #ec458d, #474ed7);
+}
+.card-area:hover .card, .card-area:focus .card {
+  transform: rotateY(180deg);
+}
 @media (min-width: 426px) and (max-width: 768px) {
-  .card {
+  .card-area {
+    min-width: 100%;
+    height: 200px;
+    margin-bottom: 1em;
+    transition: all 0.2s;
+  }
+  .card-area .card {
     min-width: 100%;
     height: 200px;
   }
-  .card__article {
-    display: flex;
+  .card-area .card__back {
+    padding: 3em 1em;
   }
-  .card__image {
+  .card-area .card__image {
     width: 40%;
     -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
   }
-  .card__content {
+  .card-area .card__content {
     top: 0;
     padding-left: 45%;
   }
