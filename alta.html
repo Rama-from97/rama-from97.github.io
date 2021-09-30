@@ -5,9 +5,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <h1>Alta</h1>
+<!-- Header -->
+    <header class="main-header">
+
+        <input type="checkbox" id="menu">
+
+        <nav class="nav-bar">
+            <ul class="nav-bar__nav-list">
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="alta.html">Alta</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <a href="index.html" class="search-bar__logo-container">
+                <img src="img/connectus03.svg" alt="logo connectus" class="search-bar__logo-svg">
+                <span class="search-bar__logo-name">Connectus</span>
+            </a>
+            <form class="search-bar__form-container">
+                <label class="search-bar__form-label" for="busqueda">Quiero comprar...</label>
+                <input class="search-bar__form-search" id="busqueda" type="search">
+                <input class="search-bar__form-submit" type="submit" value="Buscar">
+            </form>
+            <div class="search-bar__carrito-container">
+                <img src="img/cart.svg" alt="cart">
+            </div>
+            <div class="menu-toggle">
+                <label class="menu-toggle__label" for="menu">
+                    <span class="menu-toggle__pan-arriba"></span>
+                    <span class="menu-toggle__medallon"></span>
+                    <span class="menu-toggle__pan-abajo"></span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+<!-- Form -->
+
+    <main>
+        <form action="node.js" method="POST" class="form">
+
+            <div class="form__input-container">
+                <label for="product-name" class="form__input-label">
+                    Nombre de producto: 
+                </label>
+                <input 
+                    type="text" 
+                    class="form__input" 
+                    id="product-name" 
+                    name="product-name"
+                    required
+                    >
+            </div>
+
+            <div class="form__input-container">
+                <label for="product-price" class="form__input-label">
+                    Precio:
+                </label>
+                <input 
+                    type="number" 
+                    class="form__input" 
+                    id="product-price" 
+                    name="product-price"
+                    required
+                    >
+            </div>
+
+            <div class="form__input-container">
+                <label for="product-stock" class="form__input-label">
+                    Stock: 
+                </label>
+                <input 
+                    type="number" 
+                    class="form__input" 
+                    id="product-stock" 
+                    name="product-stock"
+                    required
+                    >
+            </div>
+
+            <div class="form__input-container">
+                <label for="product-brand" class="form__input-label">
+                    Marca: 
+                </label>
+                <input 
+                    type="text" 
+                    class="form__input" 
+                    id="product-brand" 
+                    name="product-brand"
+                    required
+                    >
+            </div>
+
+            <div class="form__input-container">
+                <label for="product-category" class="form__input-label">
+                    Categoría:
+                </label>
+                <select  
+                    class="form__select" 
+                    id="product-category" 
+                    name="product-category"
+                    required
+                    >
+                    <option value="">- Seleccionar -</option>
+                    <option value="cel-tel">Celulares y Teléfonos</option>
+                    <option value="comput">Computación</option>
+                    <option value="cam-acc">Cámaras y Accesorios</option>
+                    <option value="ele-aud-vid">Electrónica, Audio y Video</option>
+                    <option value="con-gam">Consolas y Videojuegos</option>
+                    <option value="tel">Televisores</option>
+                </select>
+            </div>
+
+            <div class="form__input-container">
+                <label for="product-image" class="form__input-label">
+                    Foto: 
+                </label>
+                <input 
+                    type="file" 
+                    class="form__input" 
+                    id="product-image" 
+                    name="product-image" 
+                    accept="image/png, image/jpeg"
+                    required
+                    >
+            </div>
+
+            <div class="form__input-container">
+                <label for="product-details" class="form__input-label">
+                    Detalles: 
+                </label>
+                <textarea 
+                    class="form__input" 
+                    id="product-details" 
+                    name="product-details"
+                    required
+                    ></textarea>
+            </div>
+
+            <div class="form__input-container">
+                <input 
+                    type="checkbox" 
+                    class="form__input" 
+                    id="product-free-shipping" 
+                    name="product-free-shipping"
+                    checked
+                    >
+                <label for="product-free-shipping" class="form__input-label">
+                    Envío sin cargo
+                </label>
+            </div>
+
+            <div class="form__input-container">
+                <!-- <label for="product-submit" class="form__input-label">
+                </label> -->
+                <input 
+                type="submit" 
+                class="form__imput" 
+                id="product-submit" 
+                name="product-submit"
+                >
+            </div>
+
+        </form>
+    </main>
 </body>
 </html>

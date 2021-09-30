@@ -1,3 +1,6 @@
+/*********************************
+            RESET
+*********************************/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap");
 *,
 *::after,
@@ -16,6 +19,9 @@ a {
   color: inherit;
 }
 
+/*********************************
+            FONTS
+*********************************/
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -36,6 +42,9 @@ body {
   text-align: right;
 }
 
+/*********************************
+            CARDS
+*********************************/
 .card {
   outline: none;
   flex-grow: 1;
@@ -149,6 +158,9 @@ body {
   }
 }
 
+/*********************************
+            BUTTONS
+*********************************/
 .search-bar__form-submit {
   font-size: 1.4rem;
   padding: 0.3rem 0.8rem;
@@ -169,17 +181,22 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column-reverse;
+  }
+}
 
 #menu {
   display: none;
 }
-
 #menu:checked + .nav-bar {
   display: block;
 }
-
 #menu:checked ~ .search-bar .menu-toggle__label {
-  background-color: yellow;
+  background-color: #1f3460;
+  border: 1px solid #14213D;
+  border-radius: 5px;
 }
 
 /*********************************
@@ -188,19 +205,21 @@ body {
 .nav-bar {
   background-color: #14213D;
 }
-
 .nav-bar__nav-list {
   display: flex;
   list-style-type: none;
   justify-content: center;
   margin: 0.5em 0;
 }
-
+@media (max-width: 768px) {
+  .nav-bar__nav-list {
+    flex-direction: column;
+  }
+}
 .nav-bar__nav-item {
   text-align: center;
   margin: 0 0.5em;
 }
-
 .nav-bar__nav-link {
   display: block;
   background-color: #14213D;
@@ -212,6 +231,11 @@ body {
 .nav-bar__nav-link:hover {
   background-color: #1f3460;
 }
+@media (max-width: 768px) {
+  .nav-bar {
+    display: none;
+  }
+}
 
 /*********************************
             SEARCH BAR
@@ -222,27 +246,21 @@ body {
   justify-content: space-between;
   color: #fff;
 }
-
-.search-bar__logo-container,
-.search-bar__form-container {
+.search-bar__logo-container, .search-bar__form-container {
   padding: 0.5em;
 }
-
 .search-bar__logo-container {
   background-color: #333;
   display: flex;
 }
-
 .search-bar__logo-svg {
   height: 3.5em;
   margin: 0 1em;
 }
-
 .search-bar__logo-name {
   margin: auto 0;
   font-size: 1.8rem;
 }
-
 .search-bar__form-container {
   background-color: #333;
   flex-basis: 100%;
@@ -250,12 +268,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .search-bar__form-label {
   background-color: #333;
   cursor: pointer;
 }
-
 .search-bar__form-search {
   background-color: #E5E5E5;
   font-size: 1.25rem;
@@ -264,17 +280,42 @@ body {
   width: 50%;
   margin: 0 1.5rem;
 }
-
 .search-bar__form-submit {
   color: #fff;
   background-color: #333;
 }
-
 .search-bar__carrito-container {
   flex: 0 0 3em;
   background-color: #333;
   align-self: center;
   margin: auto 2em;
+}
+@media (max-width: 768px) {
+  .search-bar {
+    flex-wrap: wrap;
+  }
+  .search-bar__logo-container {
+    justify-content: center;
+    width: 100%;
+  }
+  .search-bar__form-container {
+    flex: 3;
+    justify-content: space-between;
+  }
+  .search-bar__form-label {
+    display: none;
+  }
+  .search-bar__form-search {
+    margin: 0 0.5rem 0 0;
+    flex: 2;
+  }
+  .search-bar__carrito-container {
+    margin: 0;
+    width: 3rem;
+  }
+  .search-bar__carrito-container img {
+    height: 2.3rem;
+  }
 }
 
 /*********************************
@@ -282,61 +323,43 @@ body {
 *********************************/
 .menu-toggle {
   display: none;
-  background-color: red;
   flex: 0 0 3em;
   position: relative;
-  cursor: pointer;
 }
-
 .menu-toggle__label {
+  cursor: pointer;
   display: block;
-  background-color: black;
   width: 100%;
   height: 100%;
 }
-
-.menu-toggle__pan-arriba,
-.menu-toggle__medallon,
-.menu-toggle__pan-abajo {
+.menu-toggle__pan-arriba, .menu-toggle__medallon, .menu-toggle__pan-abajo {
   display: block;
-  background-color: #333;
+  background-color: #E5E5E5;
   height: 0.2em;
   position: absolute;
   left: 0.5em;
   right: 0.5em;
   margin: 0 auto;
 }
-
 .menu-toggle__pan-arriba {
   top: 0.8em;
 }
-
 .menu-toggle__medallon {
   top: 50%;
   margin-top: -0.15em;
 }
-
 .menu-toggle__pan-abajo {
   bottom: 0.8em;
 }
-
 @media (max-width: 768px) {
-  .main-header {
-    flex-direction: column-reverse;
-  }
-
   .menu-toggle {
     display: block;
   }
-
-  .nav-bar {
-    display: none;
-  }
-
-  .nav-bar__nav-list {
-    flex-direction: column;
-  }
 }
+
+/*********************************
+            INDEX
+*********************************/
 .section-cards {
   background-color: #E5E5E5;
   padding: 1em;
