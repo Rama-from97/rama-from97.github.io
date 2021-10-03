@@ -20,6 +20,10 @@ a {
   color: inherit;
 }
 
+li {
+  list-style: none;
+}
+
 /*********************************
             FONTS
 *********************************/
@@ -41,6 +45,22 @@ body {
 
 .u-text-align-right {
   text-align: right;
+}
+
+/*********************************
+            BUTTONS
+*********************************/
+.search-bar__form-submit {
+  font-size: 1.4rem;
+  padding: 0.3rem 0.8rem;
+  border: solid #E5E5E5 1px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.search-bar__form-submit:hover, .search-bar__form-submitfocus {
+  background-color: #FCA311;
+  color: #14213D;
+  border: solid 1px;
 }
 
 /*********************************
@@ -159,20 +179,80 @@ body {
   }
 }
 
-/*********************************
-            BUTTONS
-*********************************/
-.search-bar__form-submit {
-  font-size: 1.4rem;
-  padding: 0.3rem 0.8rem;
-  border: solid #E5E5E5 1px;
-  border-radius: 0.5rem;
-  cursor: pointer;
+.slider-container {
+  margin: 2rem auto;
+  background-color: #fff;
+  width: 80%;
+  border-radius: 0.5rem 5rem;
 }
-.search-bar__form-submit:hover, .search-bar__form-submitfocus {
-  background-color: #FCA311;
-  color: #14213D;
-  border: solid 1px;
+
+.slider {
+  position: relative;
+  width: 95%;
+  height: 300px;
+  margin: auto;
+}
+.slider__text {
+  width: 50%;
+  margin-left: 2em;
+  line-height: 1.5;
+}
+.slider li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: inherit;
+  height: inherit;
+  transition: all 0.5s ease-in-out;
+}
+.slider li:first-child {
+  opacity: 1;
+}
+.slider li:target {
+  opacity: 1;
+}
+.slider li img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 275px;
+  margin: auto;
+  border-radius: 100px 5px;
+}
+.slider-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  padding-bottom: 0.5rem;
+}
+.slider-menu li {
+  height: 3rem;
+  width: 3rem;
+  opacity: 0.5;
+  transition: all 0.2s;
+  margin: 0.5rem;
+  background-color: white;
+}
+.slider-menu li:hover {
+  margin: 0 0.5rem;
+  opacity: 1;
+}
+.slider-menu li:hover img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.slider-menu img {
+  height: 3rem;
+  width: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 0;
+  transition: all 0.2s;
 }
 
 /*********************************

@@ -17,8 +17,8 @@
     }
 
     &:checked ~ .search-bar .menu-toggle__label {
-        background-color: $blue-space;
-        border: 1px solid $blue-oxford;
+        background-color: $secondary-color;
+        border: 1px solid $primary-color;
         border-radius: 5px;
     }
 }
@@ -27,7 +27,7 @@
             NAV BAR
 *********************************/
 .nav-bar {
-    background-color: $blue-oxford;
+    background-color: $primary-color;
 
     &__nav-list {
         display: flex;
@@ -46,13 +46,13 @@
 
     &__nav-link {
         display: block;
-        background-color: $blue-oxford;
+        background-color: $primary-color;
         color: #fff;
         padding: 1em 2em;
         text-decoration: none;
         transition: .25s;
         &:hover{
-            background-color: $blue-space;
+            background-color: $secondary-color;
             }
     }
     @media (max-width: 768px) {

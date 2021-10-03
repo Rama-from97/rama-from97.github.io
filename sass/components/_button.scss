@@ -9,8 +9,8 @@
     cursor: pointer;
     &:hover,
     &focus {
-        background-color: $orange-web;
-        color: $blue-oxford;
+        background-color: $alt-color;
+        color: $primary-color;
         border: solid 1px;
     }
 }
