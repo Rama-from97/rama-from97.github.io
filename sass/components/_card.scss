@@ -96,6 +96,10 @@
     * {
         transform-style: preserve-3d;
     }
+    // & > .card,
+    // & > .card &__back {
+    //     background: linear-gradient(to bottom, #ffd60b 12%,#ce8929 40%,#000000 100%);
+    // }
     &:nth-child(10n + 1) > .card,
     &:nth-child(10n + 1) > .card &__back {
         background-image: linear-gradient(to top, #b429f9, #26c5f3);
