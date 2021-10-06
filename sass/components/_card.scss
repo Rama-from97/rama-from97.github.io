@@ -37,8 +37,8 @@
     &__image {
         background-size: cover;
         height: 200px;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
-        clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
+        // -webkit-clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
+        // clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
         background-position: center;
     }
 
@@ -76,7 +76,15 @@
         padding: 5em 1em;
     }
 
-
+    &__price {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
 
 
     @media (min-width: 1024px) {
@@ -96,59 +104,62 @@
     * {
         transform-style: preserve-3d;
     }
-    // & > .card,
-    // & > .card &__back {
-    //     background: linear-gradient(to bottom, #ffd60b 12%,#ce8929 40%,#000000 100%);
+    & > .card,
+    & > .card &__back {
+        // background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+        background: linear-gradient(0deg, rgba(173,173,173,1) 0%, rgba(226,226,226,1) 4%, rgba(255,255,255,1) 100%);
+
+        color: #333;
+    }
+    // &:nth-child(10n + 1) > .card,
+    // &:nth-child(10n + 1) > .card &__back {
+    //     background-image: linear-gradient(to top, #b429f9, #26c5f3);
     // }
-    &:nth-child(10n + 1) > .card,
-    &:nth-child(10n + 1) > .card &__back {
-        background-image: linear-gradient(to top, #b429f9, #26c5f3);
-    }
 
-    &:nth-child(10n + 2) > .card,
-    &:nth-child(10n + 2) > .card &__back {
-        background-image: linear-gradient(to top, #af1239, #cce269);    
-    }
+    // &:nth-child(10n + 2) > .card,
+    // &:nth-child(10n + 2) > .card &__back {
+    //     background-image: linear-gradient(to top, #af1239, #cce269);    
+    // }
 
-    &:nth-child(10n + 3) > .card,
-    &:nth-child(10n + 3) > .card &__back {
-        background-image: linear-gradient(to top, #0b3866, #3ddab2);    
-    }
+    // &:nth-child(10n + 3) > .card,
+    // &:nth-child(10n + 3) > .card &__back {
+    //     background-image: linear-gradient(to top, #0b3866, #3ddab2);    
+    // }
 
-    &:nth-child(10n + 4) > .card,
-    &:nth-child(10n + 4) > .card &__back {
-        background-image: linear-gradient(to top, #f40752, #7c65a9);
-    }
+    // &:nth-child(10n + 4) > .card,
+    // &:nth-child(10n + 4) > .card &__back {
+    //     background-image: linear-gradient(to top, #f40752, #7c65a9);
+    // }
 
-    &:nth-child(10n + 5) > .card,
-    &:nth-child(10n + 5) > .card &__back {
-        background-image: linear-gradient(to top, #1c3b41, #69d449);    
-    }
+    // &:nth-child(10n + 5) > .card,
+    // &:nth-child(10n + 5) > .card &__back {
+    //     background-image: linear-gradient(to top, #1c3b41, #69d449);    
+    // }
 
-    &:nth-child(10n + 6) > .card,
-    &:nth-child(10n + 6) > .card &__back {
-        background-image: linear-gradient(to top, #0a5df8, #ed2d53);    
-    }
+    // &:nth-child(10n + 6) > .card,
+    // &:nth-child(10n + 6) > .card &__back {
+    //     background-image: linear-gradient(to top, #0a5df8, #ed2d53);    
+    // }
 
-    &:nth-child(10n + 7) > .card,
-    &:nth-child(10n + 7) > .card &__back {
-        background-image: linear-gradient(to top, #661069, #30d26e);    
-    }
+    // &:nth-child(10n + 7) > .card,
+    // &:nth-child(10n + 7) > .card &__back {
+    //     background-image: linear-gradient(to top, #661069, #30d26e);    
+    // }
 
-    &:nth-child(10n + 8) > .card,
-    &:nth-child(10n + 8) > .card &__back {
-        background-image: linear-gradient(to top, #702b19, #cec360);    
-    }
+    // &:nth-child(10n + 8) > .card,
+    // &:nth-child(10n + 8) > .card &__back {
+    //     background-image: linear-gradient(to top, #702b19, #cec360);    
+    // }
 
-    &:nth-child(10n + 9) > .card,
-    &:nth-child(10n + 9) > .card &__back {
-        background-image: linear-gradient(to top, #034a66, #ced11a);    
-    }
+    // &:nth-child(10n + 9) > .card,
+    // &:nth-child(10n + 9) > .card &__back {
+    //     background-image: linear-gradient(to top, #034a66, #ced11a);    
+    // }
 
-    &:nth-child(10n + 10) > .card,
-    &:nth-child(10n + 10) > .card &__back {
-        background-image: linear-gradient(to top, #ec458d, #474ed7);    
-    }
+    // &:nth-child(10n + 10) > .card,
+    // &:nth-child(10n + 10) > .card &__back {
+    //     background-image: linear-gradient(to top, #ec458d, #474ed7);    
+    // }
 
     &:hover .card,
     &:focus .card {

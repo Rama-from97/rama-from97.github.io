@@ -63,10 +63,11 @@
             SEARCH BAR
 *********************************/
 .search-bar {
-    background-color: #333;
+    background-color: #111;
     display: flex;
     justify-content: space-between;
     color: #fff;
+    border-bottom: #fff solid 1px;
 
     &__logo-container,
     &__form-container {
@@ -74,7 +75,7 @@
     }
 
     &__logo-container {
-        background-color: #333;
+        background-color: #111;
         display: flex;
     }
 
@@ -89,7 +90,7 @@
     }
 
     &__form-container {
-        background-color: #333;
+        background-color: #111;
         flex-basis: 100%;
         display: flex;
         justify-content: center;
@@ -97,7 +98,7 @@
     }
 
     &__form-label {
-        background-color: #333;
+        background-color: #111;
         cursor: pointer;
     }
 
@@ -112,12 +113,12 @@
     
     &__form-submit {
         color: #fff;
-        background-color: #333;
+        background-color: #111;
     }
 
     &__carrito-container {
         flex: 0 0 3em;
-        background-color: #333;
+        background-color: #111;
         align-self: center;
         margin: auto 2em;
     }
