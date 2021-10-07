@@ -277,8 +277,9 @@ body {
     align-items: center;
     justify-items: center;
   }
-  .slider li > * {
-    width: 100%;
+  .slider li div {
+    width: 90%;
+    text-align: center;
   }
   .slider-menu {
     gap: 0.5rem;
