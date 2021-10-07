@@ -11,7 +11,8 @@
 
 body {
     box-sizing: border-box;
-    background-color: black;
+    min-height: 1080px;
+    background-image: $light-gradient;
     color: $platinum;
 }
 

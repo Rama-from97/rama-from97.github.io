@@ -1,0 +1,16 @@
+/*********************************
+            FORMS
+*********************************/
+.form {
+    margin: 3rem;
+    border-radius: 2rem .3rem;
+    background-image: $light-gradient;
+    color: #333;
+    &__input-container {
+        padding: 1rem 2rem;
+    }
+    &__input,
+    &__textarea {
+        display:block;
+    }
+}

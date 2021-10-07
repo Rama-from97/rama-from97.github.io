@@ -1,19 +1,29 @@
-.slider-container {
-    margin: 2rem  auto;
-    width: 80%;
-    border-radius: .5rem 5rem;
-    background: linear-gradient(135deg, #ffd60b 0%,#ce8929 18%,#000000 82%);
-    color: white;
-}
+/*********************************
+            SLIDER
+*********************************/
 .slider {
     position: relative;
     width: 95%;
     height: 300px;
     margin: auto;
     
+    &-section {
+        background-color: black;
+        padding: 4rem 0;
+    }
+
+    &-container {
+        margin: 0  auto;
+        width: 80%;
+        border-radius: .5rem 5rem;
+        background: linear-gradient(135deg, #ffd60b 0%,#ce8929 18%,#000000 82%);
+        color: white;
+        max-width: 1200px;
+    }
+
     &__text {
         width: 50%;
-        margin-left: 2em;
+        margin-left: 2rem;
         line-height: 1.5;
     }
 
