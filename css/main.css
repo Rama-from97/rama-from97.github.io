@@ -274,6 +274,8 @@ body {
   .slider li {
     grid-template-columns: 1fr;
     margin: 1.5rem auto;
+    align-items: center;
+    justify-items: center;
   }
   .slider li > * {
     width: 100%;
