@@ -7,10 +7,10 @@
     border: solid $platinum 1px;
     border-radius: .5rem;
     cursor: pointer;
-    // transition: all .3s;
+    transition: all .2s;
     &:hover,
     &:focus {
-        background-color: $platinum;
+        background-color: $alt-color;
         color: $primary-color;
         border: solid 1px;
         // box-shadow: 

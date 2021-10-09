@@ -73,7 +73,23 @@
     }
     &__back {
         transform: rotateY(180deg);
-        padding: 5em 1em;
+        padding: 2em 1em;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+
+        i {
+            transition: all .2s;
+            
+            &:hover {
+                color: $alt-color;
+            }
+        }
     }
 
     &__price {

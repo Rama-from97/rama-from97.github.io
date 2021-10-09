@@ -8,6 +8,7 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+
     &--contact {
         color: $platinum;
         width: 100%;
@@ -25,6 +26,7 @@
             border: solid black .15rem;
             background-color: hsla(0, 0%, 20%, 0.302);
             backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
 
         label,
@@ -34,15 +36,18 @@
             padding: .5rem;
             justify-items: center;
         }
+
         label {
             text-align: center;
         }
+
         textarea {
             width: 90%;
             height: 10rem;
             margin: 0 auto;
             resize: none;
         }
+
         .button {
             justify-items: center;
             margin: auto;
