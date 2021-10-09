@@ -22,3 +22,17 @@
                     
     }
 }
+.button {
+    font-size: 1.4rem;
+    padding: .3rem .8rem;
+    border: solid #333 .15rem;
+    background-color: transparent;
+    border-radius: .15rem;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        background-color: #333;
+        color: $platinum;
+        border: solid .15rem #333;
+    }
+}
