@@ -151,7 +151,7 @@
         }
         
 
-        h3 {
+        h3:not(.error) {
             text-align: center;
             margin: auto;
         }

@@ -9,6 +9,12 @@
     box-sizing: inherit;
 }
 
+
+*::selection {
+    background-color: $alt-color;
+    color: #333;
+}
+
 body {
     box-sizing: border-box;
     background-image: $light-gradient;

@@ -10,6 +10,16 @@
   box-sizing: inherit;
 }
 
+*::-moz-selection {
+  background-color: #FCA311;
+  color: #333;
+}
+
+*::selection {
+  background-color: #FCA311;
+  color: #333;
+}
+
 body {
   box-sizing: border-box;
   background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
@@ -472,6 +482,96 @@ select {
 }
 
 /*********************************
+            ERROR
+*********************************/
+.error {
+  position: relative;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  -webkit-animation: error 0.5s infinite;
+          animation: error 0.5s infinite;
+}
+.error span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.error span:first-child {
+  -webkit-animation: glitch 650ms infinite;
+          animation: glitch 650ms infinite;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+          clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  transform: translate(-0.05em, -0.025em);
+  opacity: 0.8;
+}
+.error span:last-child {
+  -webkit-animation: glitch 375ms infinite;
+          animation: glitch 375ms infinite;
+  -webkit-clip-path: polygon(0 60%, 100% 40%, 100% 100%, 0 100%);
+          clip-path: polygon(0 60%, 100% 40%, 100% 100%, 0 100%);
+  transform: translate(0.05em, 0.05em);
+  opacity: 0.8;
+}
+@-webkit-keyframes error {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+@keyframes error {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+
+/*********************************
+            HAMBURGER
+*********************************/
+#menu:checked ~ .search-bar .menu-toggle__hamburger {
+  transform: rotate(45deg) translate(1.2rem, 0.8rem);
+}
+#menu:checked ~ .search-bar .menu-toggle__hamburger::before {
+  opacity: 0;
+}
+#menu:checked ~ .search-bar .menu-toggle__hamburger::after {
+  transform: rotate(90deg) translate(-6px);
+}
+
+/*********************************
             HEADER
 *********************************/
 .main-header {
@@ -500,7 +600,7 @@ select {
             NAV BAR
 *********************************/
 .nav-bar {
-  background-color: #14213D;
+  background-color: #111;
 }
 .nav-bar__nav-list {
   display: flex;
@@ -519,7 +619,6 @@ select {
 }
 .nav-bar__nav-link {
   display: block;
-  background-color: #14213D;
   color: #fff;
   padding: 1em 2em;
   text-decoration: none;
@@ -532,6 +631,7 @@ select {
 @media (max-width: 768px) {
   .nav-bar {
     display: none;
+    background-color: #14213D;
   }
 }
 
@@ -652,24 +752,27 @@ select {
   width: 100%;
   height: 100%;
 }
-.menu-toggle__pan-arriba, .menu-toggle__medallon, .menu-toggle__pan-abajo {
+.menu-toggle__hamburger {
   display: block;
-  background-color: #E5E5E5;
-  height: 0.2em;
+  position: relative;
+  transform: translateY(1.5rem);
+}
+.menu-toggle__hamburger, .menu-toggle__hamburger::before, .menu-toggle__hamburger::after {
+  width: 3em;
+  height: 3px;
+  background: #E5E5E5;
+  transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+.menu-toggle__hamburger::before, .menu-toggle__hamburger::after {
+  content: "";
   position: absolute;
-  left: 0.5em;
-  right: 0.5em;
-  margin: 0 auto;
+  left: 0;
 }
-.menu-toggle__pan-arriba {
-  top: 0.8em;
+.menu-toggle__hamburger::before {
+  bottom: 6px;
 }
-.menu-toggle__medallon {
-  top: 50%;
-  margin-top: -0.15em;
-}
-.menu-toggle__pan-abajo {
-  bottom: 0.8em;
+.menu-toggle__hamburger::after {
+  top: 6px;
 }
 @media (max-width: 768px) {
   .menu-toggle {
@@ -886,7 +989,7 @@ select {
   font-family: monospace;
   font-size: 1.1rem;
 }
-.about__screen h3 {
+.about__screen h3:not(.error) {
   text-align: center;
   margin: auto;
 }

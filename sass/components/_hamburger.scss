@@ -1,0 +1,18 @@
+/*********************************
+            HAMBURGER
+*********************************/
+#menu:checked ~ .search-bar .menu-toggle {
+    &__hamburger {
+        transform: rotate(45deg) translate(1.2rem, .8rem);
+        
+    }
+    
+    &__hamburger::before {
+        opacity: 0;
+    }
+    
+    &__hamburger::after {
+        transform: rotate(90deg) translate(-6px);
+    }
+
+}
