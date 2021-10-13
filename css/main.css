@@ -210,7 +210,7 @@ body {
 }
 
 /*********************************
-            FORMS
+FORMS
 *********************************/
 .form__container {
   background-position: center;
@@ -245,6 +245,11 @@ body {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
+@media (max-width: 620px) {
+  .form__box {
+    max-width: 90%;
+  }
+}
 .form--contact {
   width: 100%;
   margin: 0 auto;
@@ -261,6 +266,11 @@ body {
 .form--contact .button {
   justify-items: center;
   margin: auto;
+}
+@media (max-width: 620px) {
+  .form--contact__input-container:not(:nth-child(3)) {
+    margin: 1rem auto;
+  }
 }
 .form--load__box {
   margin: 0 5%;
