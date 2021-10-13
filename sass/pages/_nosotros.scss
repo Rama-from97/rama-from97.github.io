@@ -1,0 +1,254 @@
+/*********************************
+            NOSOTROS
+*********************************/
+.body-about {
+    background: -webkit-linear-gradient(-45deg, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+    color: #fff;
+}
+
+.about {
+    font-family: 'Montserrat', sans-serif;
+
+    &__header {
+        padding: 3rem;
+        border-radius: 1rem;
+        text-align: center;
+        margin: 2rem auto;
+        -webkit-box-shadow: 0px 0px 16px -1px #FFFFFF, 0px 0px 3px -1px #FFFFFF, 0px 0px 10px -1px #006714; 
+        box-shadow: 0px 0px 16px -1px #FFFFFF, 0px 0px 3px -1px #FFFFFF, 0px 0px 10px -1px #006714;
+        background-color: #333;
+        width: fit-content;
+        line-height: 2;
+        h1,
+        h2{
+            font-weight: 100;
+        }
+    }
+
+    &__display {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    &__box{
+        background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), 
+                    radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+        background-blend-mode: multiply,multiply;
+        border-radius: 1rem;
+        margin: 6rem;
+        display: flex ;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+
+        &--double {
+            grid-column: 1/3;
+            margin: 6rem 10% 10rem;
+        }
+    }
+
+    &__button {
+        background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), 
+                    linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+        background-blend-mode: multiply;
+        border-radius:5px;
+        border:1px solid #636363;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        // font-family:Arial;
+        // font-size:15px;
+        font-weight:bold;
+        padding:11px 23px;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #616161;
+        transition: all .25s;
+        z-index: 5;
+
+        &:hover {
+            box-shadow: 0 0 .5rem white,
+                        0 0 1rem rgb(147, 224, 250);
+
+        }
+        
+        &:active {           
+            position:relative;
+            top:1px;
+        }
+    }
+
+    &__empty {
+        background-color: hsla(0, 0%, 0%, 0.25);
+        border-radius: .5rem;
+        box-shadow: inset 0 0 1rem .5rem black;
+        margin: 1rem;
+        position: relative;
+        height: 10rem;
+        width: 100%;
+        &--double {
+            height: 20rem;
+        }
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked + div .about__screen {
+            opacity: 85%;
+            transform: scale( 1.25) translateY(10%);
+
+            &--normal {
+            box-shadow: inset 0 0 2rem .2rem white,
+                        0 0 1rem white,
+                        0 0 2.5rem .5rem rgb(147, 224, 250);
+            }
+            
+            &--error {
+                box-shadow: inset 0 0 2rem .2rem white,
+                0 0 1rem white,
+                0 0 2rem .25rem white,
+                0 0 4rem .5rem red,
+                0 0 8rem .8rem red,
+                0 0 10rem 1rem red;
+                transition: .15s
+            }
+            &--warning {
+            box-shadow: inset 0 0 2rem .2rem white,
+                        0 0 1rem white,
+                        0 0 2.5rem .5rem $alt-color,
+            }
+
+        }
+    }
+    
+    
+    &__screen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1rem;
+        opacity: 0;
+        transition: all .5s;
+        border-radius: .25rem;
+        
+        &--normal {
+            background-image: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
+            color: darkslategray;
+        }
+        &--error {
+            background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+            color: white;
+            font-weight: bold;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        
+        &--warning {
+            // background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            color: white;
+            background-color: $alt-color;
+            font-weight: bold;
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+        
+
+        h3 {
+            text-align: center;
+            margin: auto;
+        }
+    }
+
+    &__img {
+        height: 7rem;
+        border-radius: 5px;
+        opacity: 80%;
+        margin: auto .3rem;
+        
+        &--01 {
+            float: right;
+        }
+
+        &--02 {
+            float: left;
+        }
+    }
+
+    &__techs {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        i {
+            margin: 1rem auto;
+            font-size: 4rem;
+            transition: all .25s;
+            text-shadow: white 0 0 1rem;
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__display {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+        align-items: center;
+        }
+
+        &__box {
+            width: 80%;
+            margin: auto;
+
+            &double {
+                margin-bottom: 15rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__header {
+            width: 80%;
+        }
+        &__display {
+            gap: 10rem;
+        }
+    
+        &__box {
+            &--double {
+                margin-bottom: 15rem;
+            }
+        }
+        &__techs {
+            
+            i {
+                font-size: 2.5rem;
+                &:hover{
+                    transform: none;
+                }
+            }
+
+        }
+
+        &__screen {
+            line-height: 1;
+        }
+    }
+
+    @media (max-width: 425px){
+        &__box--double {
+            height: 40rem;
+            justify-content: flex-start;
+            }
+        &__empty--double {
+            height: 40rem;
+        }
+        &__checkbox:checked + div .about__screen {
+            transform: scale(1.05);
+        }
+        
+    }
+}

@@ -34,4 +34,27 @@
 
         }
     }
+
+    @media (max-width: 425px){
+        
+        &__container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        height: fit-content;
+
+        > div{
+            margin: 1rem;
+        }
+        }
+
+        &__logo-img {
+            display: none;
+        }
+        &__external-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
 }
