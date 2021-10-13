@@ -58,8 +58,6 @@
         display:inline-block;
         cursor:pointer;
         color:#ffffff;
-        // font-family:Arial;
-        // font-size:15px;
         font-weight:bold;
         padding:11px 23px;
         text-decoration:none;
@@ -145,7 +143,6 @@
         }
         
         &--warning {
-            // background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
             color: white;
             background-color: $alt-color;
             font-weight: bold;

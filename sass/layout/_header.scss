@@ -126,7 +126,6 @@
     }
 
     &__carrito-container {
-        // flex: 0 0 3em;
         background-color: #111;
         align-self: center;
         justify-self: end;
@@ -145,7 +144,6 @@
     }
 
     @media (max-width: 768px) {
-        // flex-wrap: wrap;
         grid-auto-rows: auto;
         
         &__logo-container {
