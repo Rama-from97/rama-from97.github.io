@@ -1,0 +1,25 @@
+/*********************************
+            SCROLLBAR
+*********************************/
+::-webkit-scrollbar{
+    width: .75rem;
+}
+::scrollbar{
+    width: .75rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+::scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb{
+    background: $alt-color;
+    border-radius: 100vw;
+}
+::scrollbar-thumb{
+    background: $alt-color;
+    border-radius: 100vw;
+}

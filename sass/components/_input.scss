@@ -1,0 +1,15 @@
+/*********************************
+            INPUT
+*********************************/
+input[type=text],
+input[type=number],
+input[type=email],
+textarea,
+select{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: .5rem;
+    box-shadow: inset 0 0 .5rem rgba(255, 255, 255, 0.5);
+    padding: .5rem;
+    font-size: 1.2rem;
+}
