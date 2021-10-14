@@ -4,6 +4,9 @@
 ::-webkit-scrollbar{
     width: .75rem;
 }
+::-moz-scrollbar{
+    width: .75rem;
+}
 ::scrollbar{
     width: .75rem;
 }
@@ -11,11 +14,18 @@
 ::-webkit-scrollbar-track {
     background: #111;
 }
+::-moz-scrollbar-track {
+    background: #111;
+}
 ::scrollbar-track {
     background: #111;
 }
 
 ::-webkit-scrollbar-thumb{
+    background: $alt-color;
+    border-radius: 100vw;
+}
+::-moz-scrollbar-thumb{
     background: $alt-color;
     border-radius: 100vw;
 }
