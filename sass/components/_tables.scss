@@ -1,0 +1,25 @@
+/*********************************
+            TABLES
+*********************************/
+table,
+th,
+td {
+    border: solid black 1px;
+    border-collapse: collapse;
+    padding: .5em
+}
+table {
+    width: 96%;
+    margin: 1em auto;
+
+
+    .table--img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 5em;
+        }
+    }
+}

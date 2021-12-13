@@ -2,8 +2,7 @@
                             CARDS
 ----------------------------------------------------------------*/
 
-//          bindings
-
+//          Bindings
 
 let cards = [
     {
@@ -90,7 +89,7 @@ let cards = [
 ]
 
 
-//          functions
+//          Load Function
 
 function addCards (location) {
     cards.forEach(card => {

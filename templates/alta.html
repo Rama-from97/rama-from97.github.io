@@ -14,8 +14,8 @@
                     class="form--load__input" 
                     id="product-name" 
                     name="product-name"
-                    required
                     >
+                    <div class="input--error"><p>Campo Inválido</p></div>
             </div>
 
             <div class="form--load__input-container">
@@ -27,8 +27,8 @@
                     class="form--load__input" 
                     id="product-price" 
                     name="product-price"
-                    required
                     >
+                    <div class="input--error"><p>Campo Inválido</p></div>
             </div>
 
             <div class="form--load__input-container">
@@ -40,8 +40,8 @@
                     class="form--load__input" 
                     id="product-stock" 
                     name="product-stock"
-                    required
                     >
+                    <div class="input--error"><p>Campo Inválido</p></div>
             </div>
 
             <div class="form--load__input-container">
@@ -53,8 +53,8 @@
                     class="form--load__input" 
                     id="product-brand" 
                     name="product-brand"
-                    required
                     >
+                    <div class="input--error"><p>Campo Inválido</p></div>
             </div>
 
             <div class="form--load__input-container">
@@ -65,7 +65,6 @@
                     class="form--load__select" 
                     id="product-category" 
                     name="product-category"
-                    required
                     >
                     <option value="">- Seleccionar -</option>
                     <option value="cel-tel">Celulares y Teléfonos</option>
@@ -75,20 +74,21 @@
                     <option value="con-gam">Consolas y Videojuegos</option>
                     <option value="tel">Televisores</option>
                 </select>
+                <div class="input--error"><p>Campo Inválido</p></div>
             </div>
 
             <div class="form--load__input-container">
                 <label for="product-image" class="form--load__input-label">
-                    Foto: 
+                    Foto (URL): 
                 </label>
                 <input 
-                    type="file" 
+                    type="text" 
                     class="form--load__input" 
                     id="product-image" 
                     name="product-image" 
                     accept="image/png, image/jpeg"
-                    required
                     >
+                    <div class="input--error"><p>Campo Inválido</p></div>
             </div>
 
             <div class="form--load__input-container form--load__textarea-container">
@@ -99,8 +99,8 @@
                     class="form--load__textarea" 
                     id="product-details" 
                     name="product-details"
-                    required
                     ></textarea>
+                    <div class="input--error"><p>Campo Inválido</p></div>
             </div>
 
             <div class="form--load__input-container">
@@ -131,4 +131,8 @@
         
     </form>
 
+</div>
+
+<div id="product--table">
+    
 </div>

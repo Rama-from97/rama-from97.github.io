@@ -1,0 +1,36 @@
+{{#if allProducts.length}}
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Marca</th>
+            <th>Categoria</th>
+            <th>Detalles</th>
+            <th>Foto</th>
+            <th>Envio</th>
+        </tr>
+
+        {{#each allProducts}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{price}}</td>
+                <td>{{stock}}</td>
+                <td>{{brand}}</td>
+                <td>{{category}}</td>
+                <td>{{details}}</td>
+                <td class='table--img'>
+                    <img src={{photo}} alt="foto de {{name}}">
+                </td>
+                {{#if delivery}}
+                    <td>Si</td>
+                {{else}}
+                    <td>No</td>
+                {{/if}}
+            </tr>        
+        {{/each}}
+
+    </table>
+{{else}}
+    <h3>No se encontraron productos</h3>
+{{/if}}
