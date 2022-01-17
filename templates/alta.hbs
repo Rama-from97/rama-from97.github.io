@@ -1,5 +1,5 @@
 {{#if allProducts.length}}
-    <table>
+    <table class="tabla-alta">
         <tr>
             <th>Nombre</th>
             <th>Precio</th>
@@ -28,7 +28,7 @@
                 {{else}}
                     <td>No</td>
                 {{/if}}
-                    <td>
+                    <td class="tabla-alta__btn-section">
                         <button onclick="updateProduct({{id}})">Modificar</button>
                         <button onclick="deleteProduct({{id}})">Eliminar</button>
                     </td>

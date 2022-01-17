@@ -27,8 +27,13 @@ cartBuyBtn.addEventListener('click', () => {
     if(cart.length > 0){
         postCart()
         cart = []
-        getCartItems()
         saveCart()
+        cartItems.innerHTML = '<h3> ¡Muchas gracias por su compra!</h3>'
+        setTimeout( () => {
+            getCartItems()
+            cartDiv.classList.add ('none')
+        }, 2000
+        )
     }
 })
 

@@ -23,3 +23,29 @@ table {
         }
     }
 }
+.tabla-alta {
+    
+    &__btn-section {
+        text-align: center;
+        button {   
+        display: block;
+        font-size: 1em;
+        padding: .3em;
+        margin: .5em auto;
+        border-radius: .2em;
+        cursor: pointer;
+        color: $platinum;
+        background-color: #222;
+        border: solid 1px #111;
+        transition: .15s;
+        
+        &:hover {
+            color: #222;
+            background-color: $alt-color;
+        }
+        &:active{
+            background-color: $platinum;
+        }
+        }
+    }
+}

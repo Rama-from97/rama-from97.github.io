@@ -8,6 +8,7 @@
     border-radius: .5em;
     width: 60vw;
     position: fixed;
+    box-shadow: 0 0 .4em $alt-color;
     
     &__hud {
         background-color: white;
@@ -25,13 +26,12 @@
         grid-row: 1;
         width: 1.5em;
         height: 1.5em;
-        display: block;
-        margin: .1em .1em auto auto;
+        margin: .3em .3em auto auto;
         border-radius: .3em;
         font-size: 1.3em;
-        font-style: italic;
         color: $platinum;
         background-color: #222;
+        border: solid 1px #111;
         cursor: pointer;
         transition: .15s;
         &:hover {
