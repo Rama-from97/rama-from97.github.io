@@ -1,3 +1,4 @@
+{{#each allCards}}
 <div class="card-area">
     <div class="card" href="#">
         <article class="card__article">
@@ -19,8 +20,8 @@
         </article>
         <article class="card__back">
             <div class="card__links">
-                <a href="#"><i class="far fa-heart"></i></a>
-                <a href="#"><i class="fas fa-cart-plus"></i></a>
+                <a href="#" class="card-like"><i class="far fa-heart "></i></a>
+                <a href="#" class="card__add-cart"><i class="fas fa-cart-plus"></i></a>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur unde nostrum optio, tenetur tempore nemo eligendi omnis modi, quo quae totam molestias facere iusto aliquid! Distinctio velit enim culpa obcaecati!</p>
             <div class="card__price">
@@ -29,3 +30,4 @@
         </article>
     </div>
 </div>
+{{/each}}

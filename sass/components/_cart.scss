@@ -1,0 +1,41 @@
+.cart-content {
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9;
+    background-color: #fff;
+    border-radius: .5em;
+    width: 60vw;
+    position: fixed;
+    
+    &__hud {
+        height: 90%;
+        width: 93%;
+        margin: 1em auto;
+        background-color: blue;
+        border-radius: .5em;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-auto-rows: minmax(3em, auto);
+    }
+    &__close {
+        background-color: red;
+        grid-column: 7 / 8;
+        grid-row: 1;
+        display: block;
+        margin: 0 auto;
+        padding: .5em;
+        font-size: 2em;
+    }
+    &__items {
+        background-color: white;
+        grid-column: 2/7;
+        grid-row: 2;
+    }
+    &__send{ 
+        background-color: green;
+        grid-row: 3;
+        grid-column: 2 / 7;
+    }
+}

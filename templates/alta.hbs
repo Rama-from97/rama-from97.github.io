@@ -5,10 +5,11 @@
             <th>Precio</th>
             <th>Stock</th>
             <th>Marca</th>
-            <th>Categoria</th>
+            <th>Categoría</th>
             <th>Detalles</th>
             <th>Foto</th>
-            <th>Envio</th>
+            <th>Envío</th>
+            <th>Acciones</th>
         </tr>
 
         {{#each allProducts}}
@@ -20,13 +21,17 @@
                 <td>{{category}}</td>
                 <td>{{details}}</td>
                 <td class='table--img'>
-                    <img src={{photo}} alt="foto de {{name}}">
+                    <img src="{{photo}}" alt="{{name}}">
                 </td>
                 {{#if delivery}}
                     <td>Si</td>
                 {{else}}
                     <td>No</td>
                 {{/if}}
+                    <td>
+                        <button onclick="updateProduct({{id}})">Modificar</button>
+                        <button onclick="deleteProduct({{id}})">Eliminar</button>
+                    </td>
             </tr>        
         {{/each}}
 

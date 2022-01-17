@@ -31,20 +31,27 @@ cardArea.classList.add ("cards-container")
 //          functions
 
 /* cambia el contenido en base al hash actual */
+
+
 function getTemplate() {
     let id = location.hash.slice(1) || 'home'
     let file = getFileRoute(id)
     let xhrLocation = ajax(file)
-    xhrLocation.addEventListener('load', () => {
+    xhrLocation.addEventListener('load', async () => {
         if (xhrLocation.status == 200) {
             let template = xhrLocation.response
             elemMain.innerHTML = template
             if( id == 'home') {
-                //check cards.js
-                addCards(cardArea)
-                elemMain.appendChild (cardArea)
+                if (cardArea == '') {
+                    addCards(cardArea)
+                } else {
+                    cardArea.innerHTML = ''
+                    addCards(cardArea)
+                }
+                elemMain.appendChild(cardArea)
+                docStateCards ()
             } else if (id == 'alta') {
-                loadProduct ()
+                await loadProduct ()
                 renderProducts()
             }
         }
@@ -52,6 +59,7 @@ function getTemplate() {
 }
 
 getTemplate ()
+
 
 //          events
 
@@ -66,5 +74,11 @@ navLinks.forEach(link => {
 
 /* cada vez que cambie el hash por x razón, cambia el contenido */
 window.addEventListener('hashchange', () => {
+    resetLocalArrays ()
     getTemplate ()
 })
+
+function resetLocalArrays () {
+    cardCarts = []
+}
+

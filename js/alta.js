@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------
                             ALTA
 ----------------------------------------------------------------*/
-
+'use strict';
 //          Bindings
 
 let elemForm
@@ -17,14 +17,14 @@ const regExpArray =[
     /^((https:\/\/)|(http:\/\/)).+((\.jpg)|(\.png)|(\.jpeg)|(\.svg))$/, //Foto
     /^(.|\n){5,500}$/ ,                                                  //Detalles 
 ]
-let allProducts = []
+
 
 
 let allValidate = false
 
 //          Functions
 
-function loadProduct () {
+async function loadProduct () {
     elemForm = document.querySelectorAll('.form--load')[0]
     
     for (let i = 0; i <= 7; i++){
@@ -44,6 +44,8 @@ function loadProduct () {
     divErrorArray = document.querySelectorAll('.input--error')
 
     elemTable = document.querySelector('#product--table')
+
+    await getProducts()
 
     elemForm.addEventListener('submit', e => {
         e.preventDefault()
@@ -70,21 +72,27 @@ function checkValidations () {
     }
 }
 
-function submitProduct () {
-    if ( allValidate === true) {
-        let product = {
-            name: inputArray[0].value,
-            price: inputArray[1].value,
-            stock: inputArray[2].value,
-            brand: inputArray[3].value,
-            category: inputArray[4].value,
-            photo:inputArray[5].value,
-            details: encodeURIComponent(inputArray[6].value),
-            delivery: inputArray[7].checked,
+function cleanForm() {
+    inputArray.forEach(input =>{
+        if (input.checked == true) {
+            input.checked = false
+        } else {
+            input.value = ''
         }
+    })
+}
 
-        allProducts.push(product)
-        renderProducts()
+
+function readInputObject () {
+    return {
+        name: inputArray[0].value,
+        price: inputArray[1].value,
+        stock: inputArray[2].value,
+        brand: inputArray[3].value,
+        category: inputArray[4].value,
+        photo:inputArray[5].value,
+        details: inputArray[6].value,
+        delivery: inputArray[7].checked,
     }
 }
 
@@ -92,9 +100,14 @@ function renderProducts() {
     let xhrTable = ajax('templates/alta.hbs')
     xhrTable.addEventListener('load', () => {
         if(xhrTable.status == 200) {
-            let templateHbs = xhrTable.response
-            var template = Handlebars.compile(templateHbs);
-            elemTable.innerHTML = template({allProducts })
+            var template = Handlebars.compile(xhrTable.response);
+            elemTable.innerHTML = template({allProducts})
         }
     })
+}
+
+function submitProduct () {
+    if ( allValidate === true) {
+        saveProducts()
+    }
 }

@@ -65,6 +65,17 @@
                 </label>
             </div>
         </div>
+        <div id="cart" class="cart-content none">
+            <div class="cart-content__hud">
+                <div class="cart-content__close">
+                    X
+                </div>
+                <div class="cart-content__items"></div>
+                <div class="cart-content__send">
+                    <a href="#" class="cart-content__buy-btn"> Comprar </a>
+                </div>
+            </div>
+        </div>
     </header>
 <!--////////////////////////////////////////////////////////////////
                                 MAIN
@@ -101,9 +112,20 @@
                                 SCRIPT 
 /////////////////////////////////////////////////////////////////-->
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="js/http.client.js"></script>
+
+<script src="js/services/cards.js"></script>
+<script src="js/services/productos.js"></script>
+
+<script src="js/controllers/cards.js"></script>
+<script src="js/controllers/productos.js"></script>
+
+
 <script src="js/cards.js"></script>
+<script src="js/cart.js"></script>
 <script src="js/alta.js"></script>
 <script src="js/main.js"></script>
+
     
 </body>
 </html>
