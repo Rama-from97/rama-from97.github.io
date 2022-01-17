@@ -1,7 +1,6 @@
 /*----------------------------------------------------------------
                             ALTA
 ----------------------------------------------------------------*/
-'use strict';
 //          Bindings
 
 let elemForm
@@ -26,7 +25,7 @@ let allValidate = false
 
 async function loadProduct () {
     elemForm = document.querySelectorAll('.form--load')[0]
-    
+
     for (let i = 0; i <= 7; i++){
         if(i == 4) {
             inputArray.push(document.querySelector('#product-category'))
@@ -40,7 +39,7 @@ async function loadProduct () {
             inputArray.push(document.querySelectorAll('.form--load input')[i])
         }
     }
-    
+
     divErrorArray = document.querySelectorAll('.input--error')
 
     elemTable = document.querySelector('#product--table')

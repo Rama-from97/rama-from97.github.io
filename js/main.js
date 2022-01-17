@@ -4,13 +4,6 @@
 
 //        functions
 
-function ajax(url, method){
-    let xhr = new XMLHttpRequest 
-    xhr.open(method || 'get', url)
-    xhr.send()
-    
-    return xhr
-}
 
 function getFileRoute(id) {
     return 'templates/' + (id) + '.html'
@@ -56,10 +49,8 @@ function getTemplate() {
             }
         }
     })
+    
 }
-
-getTemplate ()
-
 
 //          events
 
@@ -82,3 +73,8 @@ function resetLocalArrays () {
     cardCarts = []
 }
 
+//          ejecutables
+
+getCartItems()
+getTemplate ()
+loadCart()

@@ -27,7 +27,7 @@ function cardListener() {
     for (let i = 0; i < cardCarts.length ; i++ ) {
         cardCarts[i].addEventListener('click', e => {
             e.preventDefault()
-            console.log(allCards[i].id)
+            addItemToCart (allCards[i])
         })   
     }
 }

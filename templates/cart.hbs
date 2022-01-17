@@ -1,0 +1,22 @@
+{{#if cart.length}}
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Quita uno</th>
+        </tr>
+        {{#each cart}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{price}}</td>
+                <td>{{amount}}</td>
+                <td>
+                    <button onclick='deleteCartItem({{id}})'>X</button>
+                </td>
+            </tr>        
+        {{/each}}
+    </table>
+{{else}}
+    <h3>¡Nada por aquí!</h3>
+{{/if}}

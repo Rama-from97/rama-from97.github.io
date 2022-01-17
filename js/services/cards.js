@@ -1,4 +1,3 @@
-'use strict';
 
 let URL_cards = 'https://61e466b91a976f00176ee47e.mockapi.io/cards/' 
 

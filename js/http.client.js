@@ -1,6 +1,13 @@
-'use strict';
+
 
 // Módulo de bajo nivel
+function ajax (url, method){
+    let xhr = new XMLHttpRequest 
+    xhr.open(method || 'get', url)
+    xhr.send()
+    
+    return xhr
+}
 
 async function get(url, id) {
     try {

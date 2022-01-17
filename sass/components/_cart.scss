@@ -4,29 +4,62 @@
     left: 50%;
     transform: translate(-50%);
     z-index: 9;
-    background-color: #fff;
+    background-color: #111;
     border-radius: .5em;
     width: 60vw;
     position: fixed;
     
     &__hud {
+        background-color: white;
+        box-shadow: inset .1em .1em .5em ;
         height: 90%;
         width: 93%;
         margin: 1em auto;
-        background-color: blue;
         border-radius: .5em;
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         grid-auto-rows: minmax(3em, auto);
     }
     &__close {
-        background-color: red;
         grid-column: 7 / 8;
         grid-row: 1;
+        width: 1.5em;
+        height: 1.5em;
         display: block;
-        margin: 0 auto;
-        padding: .5em;
-        font-size: 2em;
+        margin: .1em .1em auto auto;
+        border-radius: .3em;
+        font-size: 1.3em;
+        font-style: italic;
+        color: $platinum;
+        background-color: #222;
+        cursor: pointer;
+        transition: .15s;
+        &:hover {
+            color: #222;
+            background-color: $alt-color;
+        }
+        &:active{
+            background-color: $platinum;
+        }
+    }
+    &__buy-btn {
+        font-size: 1.5em;
+        padding: .3em;
+        margin: .5em auto;
+        border-radius: .5em;
+        cursor: pointer;
+        color: $platinum;
+        background-color: #222;
+        border: solid 1px #111;
+        transition: .15s;
+        
+        &:hover {
+            color: #222;
+            background-color: $alt-color;
+        }
+        &:active{
+            background-color: $platinum;
+        }
     }
     &__items {
         background-color: white;
@@ -34,8 +67,44 @@
         grid-row: 2;
     }
     &__send{ 
-        background-color: green;
         grid-row: 3;
         grid-column: 2 / 7;
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    table {
+        text-align: center;
+
+        th {
+            background-color: $alt-color;
+            color: #111;
+        }
+
+        button {
+            font-size: 1em;
+            padding: .3em;
+            margin: .5em auto;
+            border-radius: .5em;
+            cursor: pointer;
+            color: $platinum;
+            background-color: #222;
+            border: solid 1px #111;
+            transition: .15s;
+            // letter-spacing: 1em;
+            width: 2em;
+            text-align: center;
+            
+            &:hover {
+                color: #222;
+                background-color: $alt-color;
+            }
+            &:active{
+                background-color: $platinum;
+            }
+        }
     }
 }
